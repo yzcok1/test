@@ -6,8 +6,8 @@ class Index extends Controller
 {
     public function index()
     {
-		$this->assign('name','hello');
-		return $this->fetch('index');
+		//$this->assign('name','thinkphp');
+		return $this->fetch('index',['name'=>'thinkphp']);
 		
     }
 }
