@@ -1,2 +1,50 @@
-123
-{$name}
+123</br>
+
+{$Think.APP_PATH}</br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function showmessage(){
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4){
+			alert(xhr.responseText);
+			eval("var jn_info="+xhr.responseText)
+			var s="";
+			for(var i=0;i<jn_info.length; i++){
+			s +="<p style='color:"+jn_info[i].color+"'>";
+			s +=jn_info[i].sender+"&nbsp;对&nbsp;"+jn_info[i].receiver+"&nbsp;";
+			s +=jn_info[i].biaoqing+"&nbsp;说："+jn_info[i].msg+"("+jn_info[i].add_time;
+			s +=
+			
+			
+			
+			}
+		}
+	}
+	xhr.open('get','{url:index}');
+	xhr.Send(null);
+}
+window.onload=function(){
+	showmessage();
+}
+</script>

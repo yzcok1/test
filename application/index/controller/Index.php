@@ -6,8 +6,9 @@ class Index extends Controller
 {
     public function index()
     {
-		//$this->assign('name','thinkphp');
-		return $this->fetch('index',['name'=>'thinkphp']);
+		//$this->a  ssign('name','thinkphp');
+		
+		return $this->fetch('index',['$user'=>'thinkphp'],['$num'=>'123456']);
 		
     }
 }
